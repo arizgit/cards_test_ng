@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <div class="cards-pane">
+    <div *ngFor="let num of cardMax" (click)="showCard(num)" [ngClass]="status[num] ? 'active' : 'inactive'" [ngStyle]="cardStyle"><h5>{{num}}</h5></div>
+  </div>
+  <button (click)="addCard()">Add more card</button>
+  <button (click)="changeBG()">Change background</button>
+</div>
